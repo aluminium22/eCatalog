@@ -1,4 +1,5 @@
 import React from 'react';
+import { withStyles } from 'material-ui/styles';
 import { FormGroup, FormControlLabel } from 'material-ui/Form';
 import ExpansionPanel, {
   ExpansionPanelSummary,
@@ -10,6 +11,8 @@ import Checkbox from 'material-ui/Checkbox';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import DoneIcon from '@material-ui/icons/Done';
+
+import styles from './styles';
 
 class Facets extends React.Component {
   constructor(props){
@@ -37,6 +40,7 @@ class Facets extends React.Component {
   }
 
   render(){
+    const {classes} = this.props;
     return(
       <div>
         {
@@ -72,4 +76,4 @@ class Facets extends React.Component {
 }
 
 
-export default Facets;
+export default withStyles(styles)(Facets);
